@@ -358,7 +358,7 @@ export const tourLocations: readonly TourLocation[] = [
     title: "O'Connor Engineering and Science Building",
     // Approximate starting point. Adjust this coordinate after field testing.
     coordinates: { latitude: 29.72015, longitude: -95.3991 },
-    discoveryRadiusMeters: 2000,
+    discoveryRadiusMeters: 20,
     media: [
       {
         type: "image",
