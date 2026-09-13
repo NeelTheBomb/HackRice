@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title description">
+  <title id="title">Rice Memorial Center campus life</title>
+  <desc id="description">A bright student center with glowing windows and colorful activity symbols.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#071b45"/>
+      <stop offset="1" stop-color="#164e8a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#sky)"/>
+  <circle cx="140" cy="110" r="65" fill="#f6bd2a" opacity=".9"/>
+  <path d="M120 555h960v70H120z" fill="#183d2e"/>
+  <path d="M220 210h760v350H220z" fill="#e9eef4"/>
+  <path d="M180 230l420-150 420 150z" fill="#c45b35"/>
+  <g fill="#69d5ff">
+    <path d="M285 290h145v110H285z"/><path d="M478 290h145v110H478z"/>
+    <path d="M670 290h145v110H670z"/><path d="M862 290h65v110h-65z"/>
+  </g>
+  <path d="M515 435h170v125H515z" fill="#00205b"/>
+  <g font-family="system-ui,sans-serif" font-size="54" text-anchor="middle">
+    <text x="330" y="475">🍜</text><text x="455" y="530">🎨</text>
+    <text x="755" y="525">🎤</text><text x="875" y="475">🦉</text>
+  </g>
+</svg>
