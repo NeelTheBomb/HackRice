@@ -11,8 +11,6 @@ interface CampusMapProps {
   onLocationSelect: (locationId: string) => void;
 }
 
-const OPEN_FREE_MAP_STYLE_URL = "https://tiles.openfreemap.org/styles/positron";
-
 const RICE_MAP_FALLBACK_STYLE: StyleSpecification = {
   version: 8,
   sources: {
@@ -88,7 +86,7 @@ export function CampusMap({
     try {
       map = new MapConstructor({
         container: containerRef.current,
-        style: import.meta.env.VITE_MAP_STYLE_URL || OPEN_FREE_MAP_STYLE_URL,
+        style: import.meta.env.VITE_MAP_STYLE_URL || RICE_MAP_FALLBACK_STYLE,
         center: INITIAL_CENTER,
         zoom: 16,
       });
