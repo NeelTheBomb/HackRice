@@ -245,7 +245,7 @@ export const tourLocations: readonly TourLocation[] = [
     title: "Frog Wall",
     // Placeholder near central campus. Adjust this coordinate after field testing.
     coordinates: { latitude: 29.71885019145559,  longitude:-95.39933794482525 },
-    discoveryRadiusMeters: 10,
+    discoveryRadiusMeters: 8,
     media: [
       {
         type: "video",
@@ -277,7 +277,7 @@ export const tourLocations: readonly TourLocation[] = [
     title: "Rice Central Plant",
     // Approximate placeholder. Adjust this coordinate after checking it in person.
     coordinates: { latitude: 29.720986965702316, longitude: -95.40011810448163 },
-    discoveryRadiusMeters: 40,
+    discoveryRadiusMeters: 55,
     media: [
       {
         type: "image",
