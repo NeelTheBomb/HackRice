@@ -40,6 +40,8 @@ export const tourLocations: readonly TourLocation[] = [
         </ul>
       </>
     ),
+    narrationText:
+      "Chao College is one of Rice's residential colleges, where students build community through shared traditions and everyday campus life. It offers a residential college community with convenient access to the academic quad.",
     activity: <ChaoQuiz />,
   },
   {
@@ -76,6 +78,8 @@ export const tourLocations: readonly TourLocation[] = [
         </p>
       </>
     ),
+    narrationText:
+      "Fondren Library anchors research, study, and collaboration in the center of Rice's campus. It offers research collections, librarian support, quiet study, and collaborative work spaces. Hint: on fourth floor on Fondren their may be a helpful room.",
     activity: <FondrenPresidentSort />,
   },
   {
@@ -109,6 +113,8 @@ export const tourLocations: readonly TourLocation[] = [
         </p>
       </>
     ),
+    narrationText:
+      "This bronze barn owl watches over a shaded garden, pairing Rice's owl identity with the calm character of the surrounding campus landscape. Walk around the sculpture to see how its expression and silhouette change from different angles.",
     activity: <OwlDressUp />,
   },
   {
@@ -140,6 +146,8 @@ export const tourLocations: readonly TourLocation[] = [
         </p>
       </>
     ),
+    narrationText:
+      "The Frog Wall rewards a closer look. Notice the textured surface and repeating openings, then move around it to see how the pattern changes with your perspective.",
   },
   {
     id: "rice-memorial-center",
@@ -163,6 +171,8 @@ export const tourLocations: readonly TourLocation[] = [
         </p>
       </>
     ),
+    narrationText:
+      "The Rice Memorial Center brings food, student organizations, events, and everyday conversation into one lively gathering place.",
     activity: <RmcExperience />,
   },
   {
@@ -187,6 +197,8 @@ export const tourLocations: readonly TourLocation[] = [
         </p>
       </>
     ),
+    narrationText:
+      "O'Connor is a home for collaborative engineering and science, where ideas move from sketches to experiments and working prototypes.",
     activity: <EngineeringBridgeChallenge />,
   },
 ];

@@ -20,5 +20,6 @@ export interface TourLocation {
   discoveryRadiusMeters?: number;
   media: readonly LocationMedia[];
   description: ReactNode;
+  narrationText?: string;
   activity?: ReactNode;
 }
