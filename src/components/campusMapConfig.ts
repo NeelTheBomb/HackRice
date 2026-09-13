@@ -4,10 +4,10 @@ import riceMapImageUrl from "../assets/rice-map.png";
 // Longitude: west/east move the left/right edges.
 // Latitude: north/south move the top/bottom edges.
 export const RICE_MAP_BOUNDS = {
-  west: -95.416,
-  north: 29.724,
-  east: -95.3925,
-  south: 29.709,
+  west: -95.4135,
+  north: 29.7236,
+  east: -95.3931,
+  south: 29.7105,
 } as const;
 
 export const RICE_MAP_IMAGE_URL = riceMapImageUrl;
