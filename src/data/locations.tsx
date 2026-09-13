@@ -2,6 +2,8 @@ import type { TourLocation } from "../types/tour";
 import { ChaoQuiz } from "../components/ChaoQuiz";
 import { EngineeringBridgeChallenge } from "../components/EngineeringBridgeChallenge";
 import { RmcExperience } from "../components/RmcExperience";
+import barnOwlGardenImage from "../assets/barn-owl-garden.jpg";
+import barnOwlWideImage from "../assets/barn-owl-wide.jpg";
 import chaoCollegeImage from "../assets/chao-college.svg";
 import fondrenLibraryImage from "../assets/fondren-library.svg";
 import oconnorEngineeringImage from "../assets/oconnor-engineering.svg";
@@ -67,6 +69,38 @@ export const tourLocations: readonly TourLocation[] = [
           <li>Research collections and librarian support</li>
           <li>Quiet study and collaborative work spaces</li>
         </ul>
+      </>
+    ),
+  },
+  {
+    id: "barn-owl-statue",
+    title: "Barn Owl Statue",
+    // Placeholder near central campus. Adjust after checking the statue in person.
+    coordinates: { latitude: 29.718241309717733, longitude: -95.40111414677752 },
+    discoveryRadiusMeters: 20,
+    media: [
+      {
+        type: "image",
+        src: barnOwlGardenImage,
+        alt: "Close view of the bronze barn owl statue in its garden setting.",
+      },
+      {
+        type: "image",
+        src: barnOwlWideImage,
+        alt: "Wide view of the barn owl statue and circular flower garden beside a brick campus building.",
+      },
+    ],
+    description: (
+      <>
+        <h2>A quiet campus sentinel</h2>
+        <p>
+          This bronze barn owl watches over a shaded garden, pairing Rice's owl
+          identity with the calm character of the surrounding campus landscape.
+        </p>
+        <p>
+          Walk around the sculpture to see how its expression and silhouette
+          change from different angles.
+        </p>
       </>
     ),
   },

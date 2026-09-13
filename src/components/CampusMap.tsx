@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import * as maplibre from "maplibre-gl";
+import maplibreWorkerUrl from "maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url";
 import type { Map as MapLibreMap, Marker, StyleSpecification } from "maplibre-gl";
 import type { LocationReading, TourLocation } from "../types/tour";
 import { RICE_MAP_CORNERS, RICE_MAP_IMAGE_URL } from "./campusMapConfig";
@@ -10,6 +11,8 @@ interface CampusMapProps {
   discoveredLocations: readonly TourLocation[];
   onLocationSelect: (locationId: string) => void;
 }
+
+const OPEN_FREE_MAP_STYLE_URL = "https://tiles.openfreemap.org/styles/positron";
 
 const RICE_MAP_FALLBACK_STYLE: StyleSpecification = {
   version: 8,
@@ -34,6 +37,8 @@ const RICE_MAP_FALLBACK_STYLE: StyleSpecification = {
   ],
 };
 const INITIAL_CENTER: [number, number] = [-95.39985, 29.716435];
+
+maplibre.setWorkerUrl(maplibreWorkerUrl);
 
 type MapConstructor = typeof maplibre.Map;
 type MarkerConstructor = typeof maplibre.Marker;
@@ -86,7 +91,7 @@ export function CampusMap({
     try {
       map = new MapConstructor({
         container: containerRef.current,
-        style: import.meta.env.VITE_MAP_STYLE_URL || RICE_MAP_FALLBACK_STYLE,
+        style: import.meta.env.VITE_MAP_STYLE_URL || OPEN_FREE_MAP_STYLE_URL,
         center: INITIAL_CENTER,
         zoom: 16,
       });

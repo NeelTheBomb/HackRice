@@ -63,7 +63,8 @@ vi.mock("maplibre-gl", () => {
     }
   }
 
-  return { default: { Map, Marker } };
+  const setWorkerUrl = vi.fn();
+  return { setWorkerUrl, default: { Map, Marker, setWorkerUrl } };
 });
 
 const locations: readonly TourLocation[] = [
@@ -90,7 +91,7 @@ beforeEach(() => {
 });
 
 describe("CampusMap", () => {
-  it("uses the bundled Rice campus image when no external style is configured", () => {
+  it("uses the live OpenFreeMap style when no external style is configured", () => {
     vi.stubEnv("VITE_MAP_STYLE_URL", "");
 
     render(
@@ -101,14 +102,9 @@ describe("CampusMap", () => {
       />,
     );
 
-    expect(mapLibreDoubles.maps[0].options.style).toMatchObject({
-      sources: {
-        "rice-campus-map": {
-          type: "image",
-          url: expect.stringMatching(/rice-map.*\.png$/),
-        },
-      },
-    });
+    expect(mapLibreDoubles.maps[0].options.style).toBe(
+      "https://tiles.openfreemap.org/styles/positron",
+    );
   });
 
   it("falls back to the local Rice campus image when the live style errors", () => {
