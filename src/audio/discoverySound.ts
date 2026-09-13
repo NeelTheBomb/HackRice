@@ -1,52 +1,44 @@
-let audioContext: AudioContext | null = null;
+import discoverySoundUrl from "../assets/discovery-sound.mp3";
 
-function getAudioContext(): AudioContext | null {
-  if (audioContext !== null) return audioContext;
+let discoveryAudio: HTMLAudioElement | null = null;
+let isPrimed = false;
 
-  const AudioContextClass =
-    window.AudioContext ??
-    (window as unknown as { webkitAudioContext?: typeof AudioContext }).webkitAudioContext;
-  if (!AudioContextClass) return null;
+function getDiscoveryAudio(): HTMLAudioElement | null {
+  if (discoveryAudio) return discoveryAudio;
+  if (typeof Audio === "undefined") return null;
 
-  audioContext = new AudioContextClass();
-  return audioContext;
+  discoveryAudio = new Audio(discoverySoundUrl);
+  discoveryAudio.preload = "auto";
+  return discoveryAudio;
 }
 
 export async function primeDiscoverySound(): Promise<void> {
+  if (isPrimed) return;
+
+  const audio = getDiscoveryAudio();
+  if (!audio) return;
+
   try {
-    const context = getAudioContext();
-    if (context && context.state !== "running") {
-      await context.resume();
-    }
+    audio.muted = true;
+    await audio.play();
+    isPrimed = true;
   } catch {
-    // Audio is an enhancement; browser policy or missing APIs must not block the tour.
+    // Audio is an enhancement; browser policy must not block the tour.
+  } finally {
+    audio.pause();
+    audio.currentTime = 0;
+    audio.muted = false;
   }
 }
 
 export async function playDiscoverySound(): Promise<void> {
+  const audio = getDiscoveryAudio();
+  if (!audio) return;
+
   try {
-    await primeDiscoverySound();
-    const context = getAudioContext();
-    if (!context) return;
-
-    const startTime = context.currentTime;
-    const tones = [
-      { frequency: 523.25, start: startTime, stop: startTime + 0.14 },
-      { frequency: 659.25, start: startTime + 0.12, stop: startTime + 0.3 },
-    ];
-
-    for (const tone of tones) {
-      const oscillator = context.createOscillator();
-      const gain = context.createGain();
-      oscillator.type = "sine";
-      oscillator.frequency.setValueAtTime(tone.frequency, tone.start);
-      gain.gain.setValueAtTime(0.045, tone.start);
-      gain.gain.exponentialRampToValueAtTime(0.0001, tone.stop);
-      oscillator.connect(gain);
-      gain.connect(context.destination);
-      oscillator.start(tone.start);
-      oscillator.stop(tone.stop);
-    }
+    audio.pause();
+    audio.currentTime = 0;
+    await audio.play();
   } catch {
     // Discovery continues silently if playback is unavailable or rejected.
   }

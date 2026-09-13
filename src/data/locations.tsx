@@ -1,16 +1,18 @@
 import type { TourLocation } from "../types/tour";
 import { ChaoQuiz } from "../components/ChaoQuiz";
 import { EngineeringBridgeChallenge } from "../components/EngineeringBridgeChallenge";
+import { FondrenPresidentSort } from "../components/FondrenPresidentSort";
+import { OwlDressUp } from "../components/OwlDressUp";
 import { RmcExperience } from "../components/RmcExperience";
 import barnOwlGardenImage from "../assets/barn-owl-garden.jpg";
 import barnOwlWideImage from "../assets/barn-owl-wide.jpg";
 import chaoCollegeImage from "../assets/chao-college.svg";
-import fondrenLibraryImage from "../assets/fondren-library.svg";
+import fondrenLibraryImage from "../assets/fondren-library.jpg";
+import fondrenLibraryBlackImage from "../assets/fondren-black.png"
+import frogWallImage from "../assets/frog-wall.jpg";
+import frogWallVideo from "../assets/frog-wall.mp4";
 import oconnorEngineeringImage from "../assets/oconnor-engineering.svg";
 import riceMemorialCenterImage from "../assets/rice-memorial-center.svg";
-
-const cc0FlowerVideo =
-  "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4";
 
 export const tourLocations: readonly TourLocation[] = [
   {
@@ -44,18 +46,17 @@ export const tourLocations: readonly TourLocation[] = [
     id: "fondren-library",
     title: "Fondren Library",
     coordinates: { latitude: 29.71811, longitude: -95.40013 },
-    discoveryRadiusMeters: 20,
+    discoveryRadiusMeters: 2000,
     media: [
       {
         type: "image",
         src: fondrenLibraryImage,
-        alt: "Illustration of Fondren Library's arched facade and plaza.",
+        alt: "Fondren Library's arched facade viewed across the lawn.",
       },
       {
-        type: "video",
-        src: cc0FlowerVideo,
-        label: "CC0 sample flower video from MDN for mixed-media testing",
-        poster: fondrenLibraryImage,
+        type: "image",
+        src: fondrenLibraryBlackImage,
+        alt: "Fondren Library's initial construction.",
       },
     ],
     description: (
@@ -69,15 +70,20 @@ export const tourLocations: readonly TourLocation[] = [
           <li>Research collections and librarian support</li>
           <li>Quiet study and collaborative work spaces</li>
         </ul>
+        <p>
+          <strong>Hint:</strong> on fourth floor on Fondren their may be a helpful
+          room
+        </p>
       </>
     ),
+    activity: <FondrenPresidentSort />,
   },
   {
     id: "barn-owl-statue",
     title: "Barn Owl Statue",
     // Placeholder near central campus. Adjust after checking the statue in person.
     coordinates: { latitude: 29.718241309717733, longitude: -95.40111414677752 },
-    discoveryRadiusMeters: 20,
+    discoveryRadiusMeters: 2000,
     media: [
       {
         type: "image",
@@ -100,6 +106,37 @@ export const tourLocations: readonly TourLocation[] = [
         <p>
           Walk around the sculpture to see how its expression and silhouette
           change from different angles.
+        </p>
+      </>
+    ),
+    activity: <OwlDressUp />,
+  },
+  {
+    id: "frog-wall",
+    title: "Frog Wall",
+    // Placeholder near central campus. Adjust this coordinate after field testing.
+    coordinates: { latitude: 29.7184, longitude: -95.3999 },
+    discoveryRadiusMeters: 2000,
+    media: [
+      {
+        type: "video",
+        src: frogWallVideo,
+        label: "Close-up video of the Frog Wall",
+        poster: frogWallImage,
+      },
+      {
+        type: "image",
+        src: frogWallImage,
+        alt: "Close view of the Frog Wall's textured surface and repeating circular openings.",
+      },
+    ],
+    description: (
+      <>
+        <h2>Look closely</h2>
+        <p>
+          The Frog Wall rewards a closer look. Notice the textured surface and
+          repeating openings, then move around it to see how the pattern changes
+          with your perspective.
         </p>
       </>
     ),
