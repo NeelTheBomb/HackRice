@@ -65,9 +65,9 @@ The included `.github/workflows/deploy-pages.yml` workflow tests, lints, builds,
 
 ## Map configuration
 
-Without additional configuration, the map uses OpenFreeMap's live Positron vector style. It centers once on the visitor's first location reading, then leaves the camera under the visitor's control. If the live style cannot load, the app automatically falls back to `src/assets/rice-map.png` as a local MapLibre image layer. Move or resize the fallback image by editing the `west`, `north`, `east`, and `south` values in `src/components/campusMapConfig.ts`. The values are approximate Rice campus bounds and are intentionally kept in one place for field adjustment.
+Without additional configuration, the map uses `src/assets/rice-map.png` as a local MapLibre image layer, so it also works on GitHub Pages without an external tile service. It centers once on the visitor's first location reading, then leaves the camera under the visitor's control. Move or resize the image by editing the `west`, `north`, `east`, and `south` values in `src/components/campusMapConfig.ts`. The values are approximate Rice campus bounds and are intentionally kept in one place for field adjustment.
 
-Set `VITE_MAP_STYLE_URL` to another MapLibre-compatible style URL if you want to replace OpenFreeMap. The example location coordinates are building-center estimates and should be field-tested against the intended entrance before production use.
+Set `VITE_MAP_STYLE_URL` to a MapLibre-compatible style URL if you want to opt into a hosted map. If that configured style reports a loading error, the app falls back to the bundled Rice image. The example location coordinates are building-center estimates and should be field-tested against the intended entrance before production use.
 
 ## Browser behavior
 
