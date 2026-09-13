@@ -460,6 +460,158 @@ main {
   border-color: #c7d2fe;
 }
 
+.chaus-game {
+  background: linear-gradient(145deg, #fff7ed, #fefce8);
+  border-color: #fed7aa;
+}
+
+.chaus-game__workspace {
+  align-items: center;
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: minmax(7rem, 0.7fr) minmax(0, 1.7fr);
+  margin-top: 1.25rem;
+}
+
+.chaus-cup {
+  background: rgb(255 255 255 / 65%);
+  border: 0.35rem solid #7c2d12;
+  border-radius: 0.5rem 0.5rem 2.3rem 2.3rem;
+  height: 10rem;
+  justify-self: center;
+  max-width: 8rem;
+  overflow: visible;
+  position: relative;
+  transform: perspective(20rem) rotateX(-3deg);
+  width: 100%;
+}
+
+.chaus-cup::after {
+  border: 0.35rem solid #7c2d12;
+  border-left: 0;
+  border-radius: 0 2rem 2rem 0;
+  content: "";
+  height: 4.2rem;
+  left: 100%;
+  position: absolute;
+  top: 2.1rem;
+  width: 2.2rem;
+}
+
+.chaus-cup__straw {
+  background: repeating-linear-gradient(45deg, #0284c7 0 0.55rem, #fff 0.55rem 1.1rem);
+  border-radius: 999px;
+  bottom: 7.5rem;
+  height: 5rem;
+  position: absolute;
+  right: 1.4rem;
+  transform: rotate(8deg);
+  width: 0.65rem;
+  z-index: 2;
+}
+
+.chaus-cup__drink {
+  background: linear-gradient(#f5deb3, #b87942);
+  border-radius: 0.1rem 0.1rem 1.85rem 1.85rem;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  transition: height 220ms ease;
+  width: 100%;
+}
+
+.chaus-cup__ice {
+  color: #e0f2fe;
+  font-size: 1.8rem;
+  left: 1rem;
+  position: absolute;
+  top: 2.2rem;
+  z-index: 1;
+}
+
+.chaus-cup__swirl {
+  color: #fff;
+  font-size: 2.3rem;
+  left: 50%;
+  position: absolute;
+  top: 35%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.chaus-cup--mixing {
+  animation: chaus-mix 600ms ease-in-out;
+}
+
+.chaus-ingredients {
+  display: grid;
+  gap: 0.55rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.chaus-ingredients button {
+  align-items: center;
+  background: #fff;
+  border: 2px solid #fdba74;
+  border-radius: 0.75rem;
+  color: #7c2d12;
+  cursor: pointer;
+  display: flex;
+  font-weight: 700;
+  gap: 0.45rem;
+  min-height: 3.2rem;
+  padding: 0.55rem;
+  text-align: left;
+}
+
+.chaus-ingredients button > span {
+  font-size: 1.35rem;
+}
+
+.chaus-ingredients button[aria-pressed="true"] {
+  background: #ffedd5;
+  border-color: #c2410c;
+  box-shadow: inset 0 0 0 1px #c2410c;
+}
+
+.chaus-game__actions {
+  display: flex;
+  gap: 0.65rem;
+  justify-content: center;
+  margin-top: 1.1rem;
+}
+
+.chaus-game__actions button {
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 800;
+  padding: 0.65rem 1rem;
+}
+
+.chaus-game__mix {
+  background: #7c2d12;
+  border: 2px solid #7c2d12;
+  color: #fff;
+}
+
+.chaus-game__reset {
+  background: #fff;
+  border: 2px solid #cbd5e1;
+  color: #334155;
+}
+
+@keyframes chaus-mix {
+  0%, 100% { transform: rotate(0); }
+  25% { transform: rotate(-4deg); }
+  75% { transform: rotate(4deg); }
+}
+
+@media (max-width: 34rem) {
+  .chaus-game__workspace {
+    grid-template-columns: 1fr;
+  }
+}
+
 .rmc-stage {
   background: #111c44;
   border-radius: 1.1rem;

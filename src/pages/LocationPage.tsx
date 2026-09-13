@@ -19,7 +19,9 @@ export function LocationPage() {
         Back to tour
       </button>
       <h1>{location.title}</h1>
-      <MediaCarousel media={location.media} title={location.title} />
+      {location.media.length > 0 ? (
+        <MediaCarousel media={location.media} title={location.title} />
+      ) : null}
       {location.narrationText ? (
         <LocationNarration text={location.narrationText} />
       ) : null}

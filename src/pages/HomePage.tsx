@@ -28,7 +28,7 @@ export function HomePage() {
   return (
     <div className="home-page">
       <header className="tour-header">
-        <h1>Campus Tour</h1>
+        <h1>Rice Hunt</h1>
         <p aria-label={`${discoveredIds.size} of ${tourLocations.length} locations explored`}>
           {discoveredIds.size} / {tourLocations.length} locations explored
         </p>
