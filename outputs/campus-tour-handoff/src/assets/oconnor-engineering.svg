@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title description">
+  <title id="title">O'Connor Engineering bridge challenge</title>
+  <desc id="description">A modern engineering building behind a geometric blue truss bridge.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#d9f2ff"/>
+      <stop offset="1" stop-color="#f7fbff"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <path d="M170 160h860v350H170z" fill="#d7d9dc"/>
+  <path d="M240 105h720v405H240z" fill="#f0f2f4"/>
+  <g fill="#215b82">
+    <path d="M295 165h125v245H295z"/><path d="M465 165h125v245H465z"/>
+    <path d="M635 165h125v245H635z"/><path d="M805 165h100v245H805z"/>
+  </g>
+  <g fill="none" stroke="#0066cc" stroke-width="22" stroke-linejoin="round">
+    <path d="M110 570h980"/><path d="M160 570l130-125 130 125 130-125 130 125 130-125 130 125 130-125 130 125"/>
+  </g>
+  <g fill="#f6bd2a"><circle cx="290" cy="445" r="18"/><circle cx="550" cy="445" r="18"/><circle cx="810" cy="445" r="18"/><circle cx="1070" cy="445" r="18"/></g>
+</svg>

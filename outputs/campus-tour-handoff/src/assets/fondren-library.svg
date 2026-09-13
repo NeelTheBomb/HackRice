@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
+  <title id="title">Fondren Library illustration</title>
+  <desc id="desc">An abstract illustration of Fondren Library's arched facade and plaza.</desc>
+  <rect width="800" height="500" fill="#d9e5ef"/>
+  <rect y="380" width="800" height="120" fill="#c9b394"/>
+  <rect x="115" y="105" width="570" height="280" fill="#ba7b51"/>
+  <path d="M85 105 400 35l315 70z" fill="#eed7a7"/>
+  <g fill="#f8f4e8"><path d="M190 335v-90a55 55 0 0 1 110 0v90z"/><path d="M345 335v-120a55 55 0 0 1 110 0v120z"/><path d="M500 335v-90a55 55 0 0 1 110 0v90z"/></g>
+</svg>

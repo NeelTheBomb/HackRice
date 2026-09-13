@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
+  <title id="title">Chao College illustration</title>
+  <desc id="desc">An abstract illustration of Chao College's brick buildings and a green lawn.</desc>
+  <rect width="800" height="500" fill="#d8e9e0"/>
+  <rect y="350" width="800" height="150" fill="#86b68e"/>
+  <rect x="120" y="155" width="310" height="215" fill="#a44732"/>
+  <rect x="440" y="115" width="225" height="255" fill="#7e352b"/>
+  <path d="M85 155 275 70l190 85z" fill="#f4d5a6"/>
+  <path d="M415 115 552 42l138 73z" fill="#f4d5a6"/>
+  <g fill="#f8f1d9"><rect x="165" y="210" width="42" height="57"/><rect x="243" y="210" width="42" height="57"/><rect x="321" y="210" width="42" height="57"/><rect x="485" y="180" width="42" height="57"/><rect x="565" y="180" width="42" height="57"/></g>
+</svg>
