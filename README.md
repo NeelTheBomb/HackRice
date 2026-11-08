@@ -1,3 +1,5 @@
+An interactive campus tour.
+
 # Campus Tour
 
 Lightweight Vite + React + TypeScript campus-tour skeleton using MapLibre and foreground browser geolocation.
