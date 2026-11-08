@@ -1,9 +1,17 @@
-An interactive campus tour.
+# An Interactive Campus Tour.
 
-# Campus Tour
+A Lightweight Vite + React + TypeScript campus-tour skeleton using MapLibre and foreground browser geolocation.
 
-Lightweight Vite + React + TypeScript campus-tour skeleton using MapLibre and foreground browser geolocation.
+This is a web application to create an interactive campus tour. It allows landmarks to be set, and games/videos to be added to those landmarks. When someone finds a landmark,
+that interactive experience will play, and they can keep score of how many landmarks they have found. It uses MapLibre and checks browser geolocation every three seconds. Progress is stored in cookies using stable location IDs.
 
+A operational example for Rice runs here: https://neelthebomb.github.io/HackRice/
+
+Check out the devpost submission here: https://devpost.com/software/ricehunt
+
+Currently, around 20 experiences have been created and loaded for Rice University. However, new locations can bee added/removed to customize for your college by updating `src/data/locations.tsx` as described later below.
+
+# Customizing It
 ## Run it
 
 ```powershell
