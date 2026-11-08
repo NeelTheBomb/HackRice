@@ -9,6 +9,9 @@ A operational example for Rice runs here: https://neelthebomb.github.io/HackRice
 
 Check out the devpost submission here: https://devpost.com/software/ricehunt
 
+<img width="297" height="573" alt="image" src="https://github.com/user-attachments/assets/209cd54c-a5c4-464a-a361-b0c056106fed" />
+<img width="292" height="573" alt="image" src="https://github.com/user-attachments/assets/2baacef3-26bf-43c9-9f19-5cecd0f75b19" />
+
 Currently, around 20 experiences have been created and loaded for Rice University. However, new locations can bee added/removed to customize for your college by updating `src/data/locations.tsx` as described later below.
 
 # Customizing It
